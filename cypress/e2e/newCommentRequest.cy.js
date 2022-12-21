@@ -1,4 +1,4 @@
-describe.skip("Requests - posts", () => {
+describe("Requests - posts", () => {
     it("Create new comment", () => {
         cy.request('https://jsonplaceholder.cypress.io/users?_limit=1')
             .its('body.0')             
