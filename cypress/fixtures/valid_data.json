@@ -1,0 +1,13 @@
+{
+    "base_url": "www.saucedemo.com",
+    "standard_user": "standard_user",
+    "problem_user": "problem_user",
+    "performance_glitch_user": "performance_glitch_user",
+    "locked_out_user": "locked_out_user",
+    "password": "secret_sauce",
+    "customer": {
+        "first_name": "Tester",
+        "last_name": "Testic",
+        "postal_code": "21000"
+    }
+}
