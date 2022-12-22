@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 const valid_data = require('../fixtures/valid_data.json')
 
 describe("Reset application state", () => {
