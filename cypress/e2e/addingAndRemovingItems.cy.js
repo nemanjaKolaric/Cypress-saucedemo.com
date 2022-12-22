@@ -1,4 +1,4 @@
-const valid_data = require('../fixtures/valid_data.json')
+const valid_data = require('../fixtures/valid_data.json') 
 
 describe("Adding and removing items", () => {
     beforeEach(() => {
