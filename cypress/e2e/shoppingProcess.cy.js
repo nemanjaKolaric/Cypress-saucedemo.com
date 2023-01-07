@@ -1,33 +1,23 @@
-const valid_data = require('../fixtures/valid_data.json')
-const customer = valid_data.customer
+const customer = require('../fixtures/customer.json')
+import homePage from '../pages/homePage.js'
+import checkoutPage from '../pages/checkoutPage.js'
 
-describe("Shopping Process", () => {
-    beforeEach(() => {
-        cy.visit(valid_data.base_url)
-        cy.loginForm(valid_data.standard_user, valid_data.password)
-    })
+it("Successful shoping proces", () => {
+    cy.visit(Cypress.env("url"))
+    cy.loginForm(Cypress.env("standard_user"), Cypress.env("password"))
 
-    it("standard user buying two items", () => {
-        cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
-        cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]').click()
-        cy.get('.shopping_cart_link').click()
-        cy.get('[data-test="checkout"]').click()
+    homePage.addBackpack.click()
+    homePage.addBackLight.click()
+    homePage.shoppingCartLink.click()
+    checkoutPage.checkoutButton.click()
 
-        cy.get('[data-test="firstName"]').type(customer.first_name)
-        cy.get('[data-test="lastName"]').type(customer.last_name)
-        cy.get('[data-test="postalCode"]').type(customer.postal_code)
-        cy.get('[data-test="continue"]').click()
-        
-        cy.get('.summary_subtotal_label')
-            .should('have.text', 'Item total: $39.98')
+    cy.shoppingForm(customer.firstName, customer.lastName, customer.postalCode)
 
-        cy.get('.summary_tax_label')
-            .should('have.text', 'Tax: $3.20')
+    checkoutPage.itemTotal.should('have.text', 'Item total: $39.98')
+    checkoutPage.tax.should('have.text', 'Tax: $3.20')
+    checkoutPage.total.should('have.text', 'Total: $43.18')
 
-        cy.get('.summary_total_label')
-            .should('have.text', 'Total: $43.18')
-
-        cy.get('[data-test="finish"]').click()
-        cy.get('.title').should('have.text', 'Checkout: Complete!')
-    })
+    checkoutPage.finishButton.click()
+    
+    checkoutPage.checkoutCompleteTitle.should('have.text', 'Checkout: Complete!')
 })

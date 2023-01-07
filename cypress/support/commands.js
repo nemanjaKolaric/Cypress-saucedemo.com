@@ -1,28 +1,33 @@
-Cypress.Commands.add('loginForm', (username, password) => {    
-    cy.get('[data-test="username"]')
+import loginPage from "../pages/loginPage.js";
+import checkoutPage from "../pages/checkoutPage.js";
+
+Cypress.Commands.add('loginForm', (username, password) => {
+    loginPage.inputUsername
         .clear()
         .type(username);
 
-    cy.get('[data-test="password"]')
+    loginPage.inputPassword
         .clear()
         .type(password);
 
-    cy.get('[data-test="login-button"]').click();
+    loginPage.loginBtn
+        .click();
 });
 
-Cypress.Commands.add('shoppingForm', (firstName, lastName, postalCode) => {    
-    cy.get('[data-test="firstName"]')
+Cypress.Commands.add('shoppingForm', (firstName, lastName, postalCode) => {
+    checkoutPage.inputFirstName
         .clear()
         .type(firstName);
 
-    cy.get('[data-test="lastName"]')
+    checkoutPage.inputLastName
         .clear()
         .type(lastName);
 
-    cy.get('[data-test="postalCode"]')
+    checkoutPage.inputPostalCode
         .clear()
         .type(postalCode);
 
-    cy.get('[data-test="continue"]').click()
+        checkoutPage.continueButton
+        .click();
 });
 

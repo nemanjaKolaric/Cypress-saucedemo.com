@@ -3,7 +3,7 @@ const customer = valid_data.customer
 
 describe("Checkout process - test customer information form", () => {
     beforeEach(() => {
-        cy.visit(valid_data.base_url)
+        cy.visit(Cypress.env("url"))
         cy.loginForm(valid_data.standard_user, valid_data.password)
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
         cy.get('.shopping_cart_link').click()

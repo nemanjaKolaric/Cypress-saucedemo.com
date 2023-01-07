@@ -7,6 +7,12 @@ module.exports = defineConfig({
     },
     chromeWebSecurity: false,
     video: false,
-    screenshotOnRunFailure: false
+    screenshotOnRunFailure: false,
+    env:
+    {
+        url: "https://saucedemo.com/",
+        standard_user: "standard_user",
+        password: "secret_sauce"
+    },
   },
 });

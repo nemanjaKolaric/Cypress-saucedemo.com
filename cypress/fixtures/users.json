@@ -1,0 +1,44 @@
+[
+    {
+        "credential": "valid user credential",
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "url": "/inventory.html",
+        "hasError": false
+    },
+    {
+        "credential": "valid user credential",
+        "username": "problem_user",
+        "password": "secret_sauce",
+        "url": "/inventory.html",
+        "hasError": false
+    },
+    {
+        "credential": "valid user credential",
+        "username": "performance_glitch_user",
+        "password": "secret_sauce",
+        "url": "/inventory.html",
+        "hasError": false
+    },
+    {
+        "credential": "locked user",
+        "username": "locked_out_user",
+        "password": "secret_sauce",
+        "url": "/",
+        "hasError": true
+    },
+    {
+        "credential": "invalid username",
+        "username": "tester",
+        "password": "secret_sauce",
+        "url": "/",
+        "hasError": true
+    },
+    {
+        "credential": "invalid password",
+        "username": "standard_user",
+        "password": "passw0rd_sauce",
+        "url": "/",
+        "hasError": true
+    }
+]
