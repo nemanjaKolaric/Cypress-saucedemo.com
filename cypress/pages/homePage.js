@@ -12,6 +12,14 @@ class HomePage {
         return cy.get('[data-test="add-to-cart-sauce-labs-backpack"]')
     }
 
+    get removeBackpack() {
+        return cy.get('#remove-sauce-labs-backpack')
+    }
+
+    get itemTitleBackpack() {
+        return cy.get('.inventory_item:nth-child(1) .inventory_item_name')
+    }
+
     get addBackLight() {
         return cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]')
     }
@@ -37,6 +45,6 @@ class HomePage {
         this.hamburgerMenu.click()
         this.resetAppStateLink.click({ force: true })
     }
-    
+
 }
 export default new HomePage()

@@ -1,4 +1,5 @@
-const customer = require('../fixtures/customer.json')
+const data = require('../fixtures/customer.json')
+const customer = data[0];
 import homePage from '../pages/homePage.js'
 import checkoutPage from '../pages/checkoutPage.js'
 

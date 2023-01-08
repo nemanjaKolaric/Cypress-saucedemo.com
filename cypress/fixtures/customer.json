@@ -1,5 +1,66 @@
-{
-    "firstName": "John",
-    "lastName": "Johnson",
-    "postalCode": "21000"
-}
+[
+    {
+        "info": "with all fields",
+        "url": "/checkout-step-two.html",
+        "firstName": "John",
+        "lastName": "Johnson",
+        "postalCode": "21000",
+        "hasError": false
+    },
+    {
+        "info": "with empty fields",
+        "url": "/checkout-step-one.html",
+        "firstName": "",
+        "lastName": "",
+        "postalCode": "",
+        "hasError": true
+    },
+    {
+        "info": "without firstName and lastName fields",
+        "url": "/checkout-step-one.html",
+        "firstName": "",
+        "lastName": "",
+        "postalCode": "21000",
+        "hasError": true
+    },
+    {
+        "info": "without firstName and postalCode fields",
+        "url": "/checkout-step-one.html",
+        "firstName": "",
+        "lastName": "Johnson",
+        "postalCode": "",
+        "hasError": true
+    },
+    {
+        "info": "without firstName field",
+        "url": "/checkout-step-one.html",
+        "firstName": "",
+        "lastName": "Johnson",
+        "postalCode": "21000",
+        "hasError": true
+    },
+    {
+        "info": "without lastName and postalCode fields",
+        "url": "/checkout-step-one.html",
+        "firstName": "John",
+        "lastName": "",
+        "postalCode": "",
+        "hasError": true
+    },
+    {
+        "info": "without lastName field",
+        "url": "/checkout-step-one.html",
+        "firstName": "John",
+        "lastName": "",
+        "postalCode": "21000",
+        "hasError": true
+    },
+    {
+        "info": "without postalCode field",
+        "url": "/checkout-step-one.html",
+        "firstName": "John",
+        "lastName": "Johnson",
+        "postalCode": "",
+        "hasError": true
+    }
+]

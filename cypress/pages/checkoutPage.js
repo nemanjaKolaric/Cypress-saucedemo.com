@@ -18,7 +18,7 @@ class CheckoutPage {
     get continueButton() {
         return cy.get('[data-test="continue"]')
     }
-    
+
     get itemTotal() {
         return cy.get('.summary_subtotal_label')
     }
@@ -37,6 +37,14 @@ class CheckoutPage {
 
     get checkoutCompleteTitle() {
         return cy.get('.title')
+    }
+
+    get msgError() {
+        return cy.get('[data-test="error"]')
+    }
+
+    get removeBackpack() {
+        return cy.get('#remove-sauce-labs-backpack')
     }
 
 }

@@ -40,5 +40,26 @@
         "password": "passw0rd_sauce",
         "url": "/",
         "hasError": true
+    },
+    {
+        "credential": "empty fields",
+        "username": "",
+        "password": "",
+        "url": "/",
+        "hasError": true
+    },
+    {
+        "credential": "empty password field",
+        "username": "standard_user",
+        "password": "",
+        "url": "/",
+        "hasError": true
+    },
+    {
+        "credential": "empty username field and valid password",
+        "username": "",
+        "password": "secret_sauce",
+        "url": "/",
+        "hasError": true
     }
 ]
