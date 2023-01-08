@@ -1,11 +1,19 @@
 class HomePage {
 
-    get hamburgerMenu() {
+    get menuLink() {
         return cy.get('#react-burger-menu-btn')
     }
 
     get logoutLink() {
         return cy.get('#logout_sidebar_link')
+    }
+
+    get allItemsLink() {
+        return cy.get('#inventory_sidebar_link')
+    }
+
+    get aboutLink() {
+        return cy.get('#about_sidebar_link')
     }
 
     get addBackpack() {
@@ -36,13 +44,24 @@ class HomePage {
         return cy.get('.shopping_cart_link')
     }
 
-    logOutLink() {
-        this.hamburgerMenu.click()
+    allItems() {
+        this.itemTitleBackpack.click()
+        this.menuLink.click()
+        this.allItemsLink.click({ force: true })
+    }
+
+    about() {
+        this.menuLink.click()
+        this.aboutLink.click({ force: true })
+    }
+
+    logOut() {
+        this.menuLink.click()
         this.logoutLink.click({ force: true })
     }
 
     resetAppState() {
-        this.hamburgerMenu.click()
+        this.menuLink.click()
         this.resetAppStateLink.click({ force: true })
     }
 
