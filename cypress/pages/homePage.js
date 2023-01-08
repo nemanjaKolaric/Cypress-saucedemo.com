@@ -50,11 +50,6 @@ class HomePage {
         this.allItemsLink.click({ force: true })
     }
 
-    about() {
-        this.menuLink.click()
-        this.aboutLink.click({ force: true })
-    }
-
     logOut() {
         this.menuLink.click()
         this.logoutLink.click({ force: true })

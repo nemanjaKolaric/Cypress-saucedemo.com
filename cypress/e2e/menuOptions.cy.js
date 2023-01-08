@@ -12,6 +12,11 @@ describe('Menu functionality test suite', () => {
         cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
     })
 
+    it("About link", () => {
+        homePage.menuLink.click()
+        homePage.aboutLink.should('have.attr', 'href', 'https://saucelabs.com/')
+    })
+
     it("Logout link", () => {
         homePage.logOut()
         cy.url().should('eq', 'https://www.saucedemo.com/')
