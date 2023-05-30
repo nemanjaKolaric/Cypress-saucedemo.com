@@ -21,8 +21,8 @@ describe("Requests - posts", () => {
             })
 
             .then(function () {
-                expect(this.komentar, 'post has the right user id').property('postId').to.equal(this.objava.id)
-                expect(this.komentar, 'post has the right user id').property('email').to.equal(this.korisnik.email)
+                expect(this.komentar, 'post has the right user id').property('postId', this.objava.id)
+                expect(this.komentar, 'post has the right user mail').property('email').to.equal(this.korisnik.email)
             })
     })
 })
